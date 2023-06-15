@@ -13,9 +13,9 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-light:  #f8f8f8; 
+    --clr-dark:  #363636; 
+    --clr-accent: #dc2f2f;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -70,7 +70,7 @@ strong { font-weight: var(--fw-bold) }
 
 /* Buttons */
 
-.btn {
+.btn, button {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
@@ -365,7 +365,11 @@ font-weight: 100;
 }
 
 /* My Work */
+.intro__img{
+    width: 50rem;
+    box-shadow: var(--bs);
 
+}
 .my-work {
     background-color: var(--clr-dark);
     color: var(--clr-light);
@@ -375,17 +379,23 @@ font-weight: 100;
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
 }
 
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    
 }
 
 .portfolio__img {
+  width: 100%;
+  height: 100%;
+    object-fit:cover;
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+      
 }
 
 .portfolio__item:focus {
@@ -398,7 +408,15 @@ font-weight: 100;
     transform: scale(1.2);
     opacity: .5;
 }
-
+.demoBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.demoBtn button{
+   border: none;
+}
 
 /* footer */
 
